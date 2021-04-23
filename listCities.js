@@ -13,10 +13,10 @@ module.exports = function (serv, mongoose) {
                     .then(value => city = value[0])
                     .catch(e => exception = e);
                 if (city !== undefined) {
-                    result.status(600).send("City already in the list");
+                    result.status(400).send("City already in the list");
                     return;
                 } else if (exception) {
-                    result.status(666);
+                    result.status(400);
                     return;
                 }
                 result.send(data);
@@ -33,7 +33,7 @@ module.exports = function (serv, mongoose) {
             .then(value => getCities = value)
             .catch(e => exception = e);
         if (exception) {
-            result.status(666);
+            result.status(400);
             return;
         }
         getCities.forEach(info => cities.push(info.cityName));
@@ -45,7 +45,7 @@ module.exports = function (serv, mongoose) {
         await favouriteFunc.findOneAndRemove({cityName: request.query.q})
             .catch(e => exception = e);
         if (exception) {
-            result.status(500).send();
+            result.status(400).send();
             return;
         }
         result.send();
