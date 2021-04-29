@@ -26,8 +26,8 @@ module.exports = function (serv, mongoose) {
     });
 
     serv.get("/favourites", async (request, result) => {
-        let getCities = undefined;
-        let exception = undefined;
+        let getCities;
+        let exception;
         let cities = [];
         await favouriteFunc.find()
             .then(value => getCities = value)
