@@ -1,4 +1,4 @@
-const Requests = require("./Requests/fetch");
+const Requests = require("../Requests/fetch");
 
 module.exports = function (serv) {
 serv.get("/weather/coordinates", (request, result) => {

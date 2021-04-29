@@ -4,7 +4,7 @@ const config = require("./config");
 const port = config.port;
 const url = config.url;
 const cors = require("cors");
-const methods = require("./citiesWeather");
+const methods = require("./router/citiesWeather");
 const serv = express();
 
 

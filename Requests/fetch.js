@@ -25,5 +25,7 @@ async function getByName(name) {
 }
 
 
-module.exports.getByName = getByName;
-module.exports.getByLogLat = getByLogLat;
+module.exports = {
+  getByName,
+  getByLogLat
+};

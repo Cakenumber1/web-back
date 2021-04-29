@@ -1,5 +1,5 @@
 const weather = require("./getWeather");
-const favourites = require("./listCities");
+const favourites = require("./favsWeather");
 
 function serverMethods(serv, mongoose) {
     weather(serv);

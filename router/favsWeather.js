@@ -1,5 +1,5 @@
-const Requests = require("./Requests/fetch");
-const citySchema = require("./dataBase/schema");
+const Requests = require("../Requests/fetch");
+const citySchema = require("../dataBase/schema");
 
 module.exports = function (serv, mongoose) {
     const favouriteFunc = citySchema(mongoose);
